@@ -14,7 +14,7 @@
   changed_when: false
 
 - name: Copy get-pip.py
-  copy: src=get-pip.py dest=~/get-pip.py
+  get_url: url=https://bootstrap.pypa.io/get-pip.py dest=~/get-pip.py
   when: need_pip | failed
 
 - name: Install pip
