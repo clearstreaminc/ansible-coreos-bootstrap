@@ -8,13 +8,13 @@ if [[ -e $HOME/.bootstrapped ]]; then
   exit 0
 fi
 
-PYPY_VERSION=7.3.1
+PYPY_VERSION=7.3.2
 
 if [[ -e $HOME/pypy-$PYPY_VERSION-linux64.tar.bz2 ]]; then
   tar -xjf $HOME/pypy-$PYPY_VERSION-linux64.tar.bz2
   rm -rf $HOME/pypy-$PYPY_VERSION-linux64.tar.bz2
 else
-  wget -O - https://bitbucket.org/pypy/pypy/downloads/pypy2.7-v$PYPY_VERSION-linux64.tar.bz2 |tar -xjf -
+  wget -O - https://downloads.python.org/pypy/pypy2.7-v$PYPY_VERSION-linux64.tar.bz2 |tar -xjf -
 fi
 
 mv -n pypy2.7-v$PYPY_VERSION-linux64 pypy
