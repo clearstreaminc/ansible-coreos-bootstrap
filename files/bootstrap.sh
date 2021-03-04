@@ -8,7 +8,7 @@ if [[ -e $HOME/.bootstrapped ]]; then
   exit 0
 fi
 
-PYPY_VERSION=7.3.2
+PYPY_VERSION=7.3.1
 
 if [[ -e $HOME/pypy-$PYPY_VERSION-linux64.tar.bz2 ]]; then
   tar -xjf $HOME/pypy-$PYPY_VERSION-linux64.tar.bz2
